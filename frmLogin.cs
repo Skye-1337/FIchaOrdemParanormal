@@ -31,6 +31,9 @@ namespace FIchaOrdemParanormal
         {
             string login = txtLogin.Text;
             string pass = Encryption.Encrypt(txtPassword.Text);
+
+            Database.Connect();
+            MessageBox.Show("Connected");
         }
 
     }
