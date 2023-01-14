@@ -20,7 +20,7 @@ namespace FIchaOrdemParanormal
             InitializeComponent();
         }
         #region My Declarations
-        
+
         #endregion
         private void btnSair_Click(object sender, EventArgs e)
         {
@@ -32,10 +32,15 @@ namespace FIchaOrdemParanormal
             string login = txtLogin.Text;
             string pass = Encryption.Encrypt(txtPassword.Text);
 
-            Database.Connect();
-            MessageBox.Show("Connected");
+            //Database.Connect();
+            // TODO
+            // Verify if the login is correct and who is loging
+
+            frmPlayers players = new frmPlayers();
+            Hide();
+            players.ShowDialog();
+            Close();
         }
 
     }
 }
- 
