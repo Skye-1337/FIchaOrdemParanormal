@@ -157,6 +157,12 @@
     <Compile Include="frmAlterInfo.Designer.cs">
       <DependentUpon>frmAlterInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDices.Designer.cs">
+      <DependentUpon>frmDices.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAlterInfo.resx">
       <DependentUpon>frmAlterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDices.resx">
+      <DependentUpon>frmDices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

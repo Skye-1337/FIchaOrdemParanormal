@@ -12,16 +12,18 @@ namespace FIchaOrdemParanormal
 {
     public partial class frmAlterInfo : Form
     {
-        public frmAlterInfo(string item = "")
+        public frmAlterInfo(string item = "", int value = 0)
         {
             InitializeComponent();
-            init(item);
+            init(item, value);
         }
         #region MyDeclarations
 
-        private void init(string item)
+        private void init(string item, int value)
         {
-
+            Text = $"Alterando {item}"; // ?
+            lbTitulo.Text = "{item} {item value} atual";
+            lbInfo.Text = $"Alterando {item}";
         }
 
         #endregion
