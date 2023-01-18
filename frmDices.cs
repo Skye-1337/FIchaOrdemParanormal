@@ -74,32 +74,45 @@ namespace FIchaOrdemParanormal
 
         private void Dices_TextChanged(object sender, EventArgs e)
         {
-            if (true)
+            int dices, sides;
+            try
             {
-
+                dices = Convert.ToInt32(txtDices.Text);
+                sides = Convert.ToInt32(txtSides.Text);
             }
+            catch { return; }
+
+            GenerateDices(dices, sides, 0);
         }
 
         private void SpeedDices_TextChanged(object sender, EventArgs e)
         {
-            try { Convert.ToInt32(txtSpeedDices.Text); }
+            int mod, dices;
+            try { dices = Convert.ToInt32(txtSpeedDices.Text); }
             catch
             {
                 MessageBox.Show("Texto inserido enves de números", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            int mod;
             try { mod = Convert.ToInt32(txtSpeedMod.Text); }
             catch { mod = 0; }
 
-            if (rbtnD3.Checked) PrintDices(mod);
-            else if (rbtnD4.Checked) PrintDices(mod);
-            else if (rbtnD6.Checked) PrintDices(mod);
-            else if (rbtnD8.Checked) PrintDices(mod);
-            else if (rbtnD10.Checked) PrintDices(mod);
-            else if (rbtnD12.Checked) PrintDices(mod);
-            else if (rbtnD20.Checked) PrintDices(mod);
+            if (rbtnD3.Checked) GenerateDices(dices, 3, mod);
+            else if (rbtnD4.Checked) GenerateDices(dices, 4, mod);
+            else if (rbtnD6.Checked) GenerateDices(dices, 6, mod);
+            else if (rbtnD8.Checked) GenerateDices(dices, 8, mod);
+            else if (rbtnD10.Checked) GenerateDices(dices, 10, mod);
+            else if (rbtnD12.Checked) GenerateDices(dices, 12, mod);
+            else if (rbtnD20.Checked) GenerateDices(dices, 20, mod);
+        }
+
+        private void txtMod_TextChanged(object sender, EventArgs e)
+        {
+            int mod;
+            try { mod = Convert.ToInt32(txtMod.Text); }
+            catch { return; }
+            PrintDices(mod);
         }
     }
 }

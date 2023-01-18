@@ -31,7 +31,6 @@
             this.lbManyDices = new System.Windows.Forms.Label();
             this.txtSpeedDices = new System.Windows.Forms.TextBox();
             this.gbDices = new System.Windows.Forms.GroupBox();
-            this.lbSpeedMod = new System.Windows.Forms.Label();
             this.rbtnD20 = new System.Windows.Forms.RadioButton();
             this.rbtnD12 = new System.Windows.Forms.RadioButton();
             this.rbtnD10 = new System.Windows.Forms.RadioButton();
@@ -39,6 +38,7 @@
             this.rbtnD6 = new System.Windows.Forms.RadioButton();
             this.rbtnD4 = new System.Windows.Forms.RadioButton();
             this.rbtnD3 = new System.Windows.Forms.RadioButton();
+            this.lbSpeedMod = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbDices = new System.Windows.Forms.Label();
             this.txtDices = new System.Windows.Forms.TextBox();
@@ -87,15 +87,6 @@
             this.gbDices.TabIndex = 2;
             this.gbDices.TabStop = false;
             this.gbDices.Text = "Acesso rápido";
-            // 
-            // lbSpeedMod
-            // 
-            this.lbSpeedMod.AutoSize = true;
-            this.lbSpeedMod.Location = new System.Drawing.Point(206, 45);
-            this.lbSpeedMod.Name = "lbSpeedMod";
-            this.lbSpeedMod.Size = new System.Drawing.Size(93, 19);
-            this.lbSpeedMod.TabIndex = 14;
-            this.lbSpeedMod.Text = "Modificadors:";
             // 
             // rbtnD20
             // 
@@ -181,6 +172,15 @@
             this.rbtnD3.UseVisualStyleBackColor = true;
             this.rbtnD3.CheckedChanged += new System.EventHandler(this.CheckedChanged);
             // 
+            // lbSpeedMod
+            // 
+            this.lbSpeedMod.AutoSize = true;
+            this.lbSpeedMod.Location = new System.Drawing.Point(206, 45);
+            this.lbSpeedMod.Name = "lbSpeedMod";
+            this.lbSpeedMod.Size = new System.Drawing.Size(93, 19);
+            this.lbSpeedMod.TabIndex = 14;
+            this.lbSpeedMod.Text = "Modificadors:";
+            // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
@@ -231,7 +231,7 @@
             this.txtMod.Name = "txtMod";
             this.txtMod.Size = new System.Drawing.Size(77, 26);
             this.txtMod.TabIndex = 8;
-            this.txtMod.TextChanged += new System.EventHandler(this.Dices_TextChanged);
+            this.txtMod.TextChanged += new System.EventHandler(this.txtMod_TextChanged);
             // 
             // lbMod
             // 
